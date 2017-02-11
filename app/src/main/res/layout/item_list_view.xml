@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="kemonoFriends"
+            type="com.example.shanonim.kotlin_databinding_listview.model.KemonoModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/text_view_kemono_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="500dp"
+            android:height="30dp"
+            android:gravity="center_vertical"
+            android:text="@{kemonoFriends.kemonoName}"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            tools:text="サーバル" />
+
+        <TextView
+            android:id="@+id/text_view_kemono_words"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_kemono_name"
+            android:width="500dp"
+            android:height="30dp"
+            android:gravity="center_vertical"
+            android:text="@{kemonoFriends.kemonoWords}"
+            android:textColor="@android:color/black"
+            tools:text="サーバルキャットのサーバルだよ！" />
+    </RelativeLayout>
+</layout>
